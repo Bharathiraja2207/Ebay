@@ -99,7 +99,7 @@ export function Cars({ cars, setCars }) {
 
     // }]
     const getCars = () => {
-        fetch("http://localhost:27023/cars",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/cars",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setCars(dts))
@@ -142,7 +142,7 @@ export function CarFeatures() {
     const navigate = useNavigate()
     useEffect(() => {
         const token = localStorage.getItem('token');
-        fetch(`http://localhost:27023/cars/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/cars/${id}`, {
             headers: {
                 'x-auth-token': token,
             },

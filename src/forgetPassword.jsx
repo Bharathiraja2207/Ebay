@@ -26,7 +26,7 @@ export function ForgetPassword() {
 
     const UpdateData = (newUpdate) => {
         // console.log(newUpdate)
-        fetch("https://olx-backend-seven.vercel.app/forget-password/",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/pass/forget-password/",
             {
                 method: "POST",
                 body: JSON.stringify(newUpdate),

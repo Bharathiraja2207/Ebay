@@ -18,7 +18,7 @@ export function VerifyOtp() {
     const handleResetPassword = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('https://olx-backend-seven.vercel.app/verifyotp', {
+            const response = await fetch('https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/pass/verifyotp', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, otp, password }),

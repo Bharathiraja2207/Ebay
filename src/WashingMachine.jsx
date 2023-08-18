@@ -56,7 +56,7 @@ export function WashingMachine({ washingMachines, setWashingMachines }) {
     // }]
 
     const getWashingMachines = () => {
-        fetch("http://localhost:27023/washingMachines",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/washingMachines",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setWashingMachines(dts))
@@ -99,7 +99,7 @@ export function WashingMachineFeatures() {
     const [washingMachines, setWashingMachines] = useState([])
     const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`http://localhost:27023/washingMachines/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/washingMachines/${id}`, {
             headers: {
                 'x-auth-token': token,
             },

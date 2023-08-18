@@ -158,7 +158,7 @@ function Dashboard({ products, setProducts }) {
   //   }
   // ]
   const getProducts = () => {
-    fetch("http://localhost:27023/dashboard",
+    fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/dashboard",
       { method: "GET" })
       .then((data) => data.json())
       .then((dts) => setProducts(dts))

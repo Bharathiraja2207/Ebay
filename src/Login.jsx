@@ -13,13 +13,13 @@ export function Login() {
 
     const formik = useFormik({
         initialValues: {
-            username: '',
+            email: '',
             password: ''
         },
         // validationSchema: formValidationSchema,
         onSubmit: async (values) => {
             console.log("submit")
-            const data = await fetch("https://olx-backend-seven.vercel.app/login", {
+            const data = await fetch("https://ebaybackend-hp9yvkh55-bharathiraja2207.vercel.app/pass/login", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json"
@@ -48,10 +48,10 @@ export function Login() {
                         <h2>LOGIN</h2>
                         <div className='loginfield'>
                             <TextField
-                                name='username'
-                                value={formik.values.username}
+                                name='email'
+                                value={formik.values.email}
                                 onChange={formik.handleChange}
-                                label="Username"
+                                label="email"
                                 variant="outlined" />
                             <TextField
                                 value={formik.values.password}
@@ -85,7 +85,7 @@ export function Signin() {
 
     const formik = useFormik({
         initialValues: {
-            username: '',
+            email: '',
             password: ''
         },
         // validationSchema: formValidationSchema,
@@ -98,7 +98,7 @@ export function Signin() {
     const adddata = (newdata) => {
         console.log(newdata)
 
-        fetch("https://olx-backend-seven.vercel.app/signup", {
+        fetch("https://ebaybackend-hp9yvkh55-bharathiraja2207.vercel.app/pass/signup", {
             method: "POST",
             body: JSON.stringify(newdata),
             headers: {
@@ -114,12 +114,12 @@ export function Signin() {
                     <h2>SIGNUP</h2>
                     <div className='loginfield'>
                         <TextField
-                            placeholder="username"
-                            name='username'
-                            value={formik.values.username}
+                            placeholder="email"
+                            name='email'
+                            value={formik.values.email}
                             onBlur={formik.handleBlur}
                             onChange={formik.handleChange}
-                            label="Username"
+                            label="email"
                             variant="outlined" />
                         <TextField
                             placeholder="password"
@@ -129,7 +129,7 @@ export function Signin() {
                             label="Password"
                             name="password"
                             type="password"
-                            variant="outlined" />
+                            variant="outlined"/>
                         <Button color="success" type='submit' variant="contained">submit</Button>
                         <p className="alreadyuser" onClick={() => navigate("/login")} sx={{ fontSize: 7 }}>
                             Already registered user

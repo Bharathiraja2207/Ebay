@@ -31,7 +31,7 @@ export function AddWatch() {
         }
     });
     const addData = (newdata) => {
-        fetch("https://olx-backend-seven.vercel.app/watches",
+        fetch("https://ebaybackend-hp9yvkh55-bharathiraja2207.vercel.app/one/watches",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

@@ -79,7 +79,7 @@ export function Bikes({ bikes, setBikes }) {
 
     // }]
     const getBikes = () => {
-        fetch("http://localhost:27023/bikes",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/bikes",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setBikes(dts))
@@ -122,7 +122,7 @@ export function BikeFeatures() {
     const [bikes, setBikes] = useState([])
     const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`http://localhost:27023/bikes/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/bikes/${id}`, {
             headers: {
                 'x-auth-token': token,
             },

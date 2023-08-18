@@ -41,7 +41,7 @@ export function Watches({ watches, setWatches }) {
     //     "type": "tablet"
     // }]
     const getWatches = () => {
-        fetch("http://localhost:27023/watches",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/watches",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setWatches(dts))
@@ -83,7 +83,7 @@ export function WatchFeatures() {
     const [watches, setWatches] = useState([])
     const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`http://localhost:27023/watches/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/watches/${id}`, {
             headers: {
                 'x-auth-token': token,
             },

@@ -48,7 +48,7 @@ export function AddCar() {
         }
     });
     const addData = (newdata) => {
-        fetch("https://olx-backend-seven.vercel.app/cars",
+        fetch("https://ebaybackend-hp9yvkh55-bharathiraja2207.vercel.app/one/cars",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

@@ -40,7 +40,7 @@ export function AddBike() {
         }
     });
     const addData = (newdata) => {
-        fetch("https://olx-backend-seven.vercel.app/bikes",
+        fetch("https://ebaybackend-hp9yvkh55-bharathiraja2207.vercel.app/one/bikes",
             {
                 method: "POST",
                 body: JSON.stringify(newdata),

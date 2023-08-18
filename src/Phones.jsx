@@ -58,7 +58,7 @@ export function Phones({ phones, setPhones }) {
     // }]
 
     const getPhones = () => {
-        fetch("http://localhost:27023/phones",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/phones",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setPhones(dts))
@@ -101,7 +101,7 @@ export function PhoneFeatures() {
     const [phones, setPhones] = useState([])
     const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`http://localhost:27023/phones/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/phones/${id}`, {
             headers: {
                 'x-auth-token': token,
             },

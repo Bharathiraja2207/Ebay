@@ -58,7 +58,7 @@ export function Laptops({ laptops, setLaptops }) {
     // }]
 
     const getLaptops = () => {
-        fetch("http://localhost:27023/laptops",
+        fetch("https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/laptops",
             { method: "GET" })
             .then((data) => data.json())
             .then((dts) => setLaptops(dts))
@@ -101,7 +101,7 @@ export function LaptopFeatures() {
     const [laptops, setLaptops] = useState([])
     const token = localStorage.getItem('token');
     useEffect(() => {
-        fetch(`http://localhost:27023/laptops/${id}`, {
+        fetch(`https://ebaybackend-w7xb81my5-bharathiraja2207.vercel.app/laptops/${id}`, {
             headers: {
                 'x-auth-token': token,
             },
